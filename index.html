@@ -9,24 +9,19 @@
 <meta property="og:description" content="London-based model and actor. Commercial to couture, editorial to catwalk." />
 <meta property="og:type" content="website" />
 
-<!-- favicon: simple RB monogram -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2315110c'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='52' fill='%23c7a56b' text-anchor='middle'%3ERB%3C/text%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f4f1ea'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-style='italic' font-size='54' fill='%231a1613' text-anchor='middle'%3ERB%3C/text%3E%3C/svg%3E" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css" />
 
 <!--
-  IMAGES: currently loaded from Roopa's Sandra Reynolds agency profile (used with permission).
-  To host them inside this repo instead (more robust), run ./download-assets.sh once,
-  then find/replace "https://media.sandrareynolds.co.uk/models/" with "assets/img/"
-  across this file. See README.
+  IMAGES load from Roopa's agency profile (used with permission) as placeholders.
+  They carry the agency watermark and will look far better once swapped for Roopa's
+  own high-res photos: drop them in assets/img/ and update the src paths.
 
-  STILL TO CONFIRM before going fully live:
-    - Stats (search "CONFIRM STAT") — agency listings disagree
-    - Booking email (search "CONTACT DETAIL")
-    - Logo (search "LOGO") — drop your chosen Bloom logo into assets/logo/
+  Before fully live: confirm stats (search "CONFIRM STAT") and booking email ("CONTACT DETAIL").
 -->
 </head>
 <body>
@@ -34,10 +29,10 @@
 <!-- ============ NAV ============ -->
 <nav class="nav" id="nav">
   <a href="#top" class="nav__mark">
-    <!-- LOGO: to use the Bloom logo, save it as assets/logo/logo.svg (or .png) and
-         uncomment the <img> line, then delete the text spans. -->
-    <!-- <img src="assets/logo/logo.svg" alt="Roopa Bhudia" /> -->
-    Roopa <span>Bhudia</span>
+    <!-- LOGO: once you upload the script logo, it will be swapped to:
+         <img src="assets/logo/logo.png" alt="Roopa Bhudia" />
+         For now the name renders in an elegant script typeface. -->
+    Roopa Bhudia
   </a>
   <div class="nav__links" id="navlinks">
     <a href="#portfolio">Portfolio</a>
@@ -53,11 +48,10 @@
 
 <!-- ============ HERO ============ -->
 <header class="hero" id="top">
-  <div class="hero__glow"></div>
   <div class="hero__text">
     <span class="eyebrow hero__eyebrow">London · Model &amp; Actor</span>
     <h1 class="hero__name">Roopa<br><em>Bhudia</em></h1>
-    <p class="hero__sub">A versatile, non-traditional look that reads across cultures and campaigns. From commercial and editorial to catwalk, beauty and bridal.</p>
+    <p class="hero__sub">A versatile, non-traditional look that reads across cultures and campaigns, from commercial and editorial to catwalk, beauty and bridal.</p>
     <div class="hero__meta">
       <span>Fashion</span><i class="dot"></i><span>Commercial</span><i class="dot"></i><span>Beauty</span><i class="dot"></i><span>Catwalk</span>
     </div>
@@ -83,54 +77,51 @@
       <span class="eyebrow">Selected Frames</span>
       <h2 class="sec-head__title">Portfolio</h2>
     </div>
-    <span class="sec-head__num">01 / Folio</span>
+    <span class="sec-head__num">01 — Folio</span>
   </div>
 
-  <!-- Reorder these to lead with the strongest images. Click any tile to open the lightbox. -->
+  <!-- Natural-ratio masonry: images are never cropped. Reorder the figures to lead
+       with the strongest shots. Click any image to open the lightbox. -->
   <div class="gallery reveal" id="gallery">
-    <figure class="tile tile--tall">
-      <img src="https://media.sandrareynolds.co.uk/models/nRjPtBocGrN5YXKOg1ODWoAwNV9aWnC32G7kNfCn8pR3zg56koOfmNXpNADQ6lfiCDV68a.jpg" alt="Roopa Bhudia — folio 01" loading="lazy" />
-      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Folio 01</small></figcaption>
+    <figure class="tile">
+      <img src="https://media.sandrareynolds.co.uk/models/g3zmyWvVsDnyKz09OMTk5t4ZxWMvOJtfDlyjlb73ef7sCVytz9ANw1r7JslB6blfUz8EXx.jpg" alt="Roopa Bhudia — fashion" loading="lazy" />
+      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Fashion</small></figcaption>
     </figure>
-    <figure class="tile tile--wide">
-      <img src="https://media.sandrareynolds.co.uk/models/g3zmyWvVsDnyKz09OMTk5t4ZxWMvOJtfDlyjlb73ef7sCVytz9ANw1r7JslB6blfUz8EXx.jpg" alt="Roopa Bhudia — folio 02" loading="lazy" />
-      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Folio 02</small></figcaption>
+    <figure class="tile">
+      <img src="https://media.sandrareynolds.co.uk/models/igTxQDx04T03e3GAs2qbePwGyKY70JB1jTlvyhmjW63Ednk6gZgleie3OBTwM1omZkvCHR.jpg" alt="Roopa Bhudia — beauty" loading="lazy" />
+      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Beauty</small></figcaption>
     </figure>
-    <figure class="tile tile--sq">
-      <img src="https://media.sandrareynolds.co.uk/models/RlzsKwzXtzaW7v1SUVpKYuy0NiQUpNgmpi4VTECs0T39UsROChtMTTlvi0SnxQwsgFXt8J.jpg" alt="Roopa Bhudia — folio 03" loading="lazy" />
-      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Folio 03</small></figcaption>
+    <figure class="tile">
+      <img src="https://media.sandrareynolds.co.uk/models/wnQoiOxmZStOQ4yocDus1gcSbAFkZb7IQ4gk7PTbbUh3VHbWOaFxWZHCwd17p8Tqs46Yd0.jpg" alt="Roopa Bhudia — editorial" loading="lazy" />
+      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Editorial</small></figcaption>
     </figure>
-    <figure class="tile tile--sq">
-      <img src="https://media.sandrareynolds.co.uk/models/igTxQDx04T03e3GAs2qbePwGyKY70JB1jTlvyhmjW63Ednk6gZgleie3OBTwM1omZkvCHR.jpg" alt="Roopa Bhudia — folio 04" loading="lazy" />
-      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Folio 04</small></figcaption>
+    <figure class="tile">
+      <img src="https://media.sandrareynolds.co.uk/models/nRjPtBocGrN5YXKOg1ODWoAwNV9aWnC32G7kNfCn8pR3zg56koOfmNXpNADQ6lfiCDV68a.jpg" alt="Roopa Bhudia — lifestyle" loading="lazy" />
+      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Lifestyle</small></figcaption>
     </figure>
-    <figure class="tile tile--sq">
-      <img src="https://media.sandrareynolds.co.uk/models/8713HH8BVpLyEQvNtDHVeDNn82JjGtFd9lyMNhs6xfmUpWZz3VHKXocN0kXNTxgSvwSepE.jpg" alt="Roopa Bhudia — folio 05" loading="lazy" />
-      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Folio 05</small></figcaption>
+    <figure class="tile">
+      <img src="https://media.sandrareynolds.co.uk/models/8713HH8BVpLyEQvNtDHVeDNn82JjGtFd9lyMNhs6xfmUpWZz3VHKXocN0kXNTxgSvwSepE.jpg" alt="Roopa Bhudia — commercial" loading="lazy" />
+      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Commercial</small></figcaption>
     </figure>
-    <figure class="tile tile--wide">
-      <img src="https://media.sandrareynolds.co.uk/models/wnQoiOxmZStOQ4yocDus1gcSbAFkZb7IQ4gk7PTbbUh3VHbWOaFxWZHCwd17p8Tqs46Yd0.jpg" alt="Roopa Bhudia — folio 06" loading="lazy" />
-      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Folio 06</small></figcaption>
+    <figure class="tile">
+      <img src="https://media.sandrareynolds.co.uk/models/RlzsKwzXtzaW7v1SUVpKYuy0NiQUpNgmpi4VTECs0T39UsROChtMTTlvi0SnxQwsgFXt8J.jpg" alt="Roopa Bhudia — lifestyle" loading="lazy" />
+      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Lifestyle</small></figcaption>
     </figure>
-    <figure class="tile tile--tall">
-      <img src="https://media.sandrareynolds.co.uk/models/RViJhmyx5ee4xoj2JXDPHNk3C5vvGsQ0Q46Clz8pHvsL6mIUBLXT8hW4YhN4bcRl74RxI0.jpg" alt="Roopa Bhudia — folio 07" loading="lazy" />
-      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Folio 07</small></figcaption>
-    </figure>
-    <figure class="tile tile--sq">
-      <img src="https://media.sandrareynolds.co.uk/models/iImmBT5ANlBGIHBfHEK7NaCCaDEtPTOZrCdODaRWfMDe7iViy4A3sP0qwyMVAM1CGTH0B7.jpg" alt="Roopa Bhudia — folio 08" loading="lazy" />
-      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Folio 08</small></figcaption>
+    <figure class="tile">
+      <img src="https://media.sandrareynolds.co.uk/models/iImmBT5ANlBGIHBfHEK7NaCCaDEtPTOZrCdODaRWfMDe7iViy4A3sP0qwyMVAM1CGTH0B7.jpg" alt="Roopa Bhudia — beauty" loading="lazy" />
+      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Beauty</small></figcaption>
     </figure>
   </div>
 </section>
 
 <!-- ============ SHOWREEL ============ -->
-<section class="section section--paper" id="reel">
+<section class="section section--tint" id="reel">
   <div class="sec-head reveal">
     <div>
       <span class="eyebrow">Watch</span>
       <h2 class="sec-head__title">Showreel</h2>
     </div>
-    <span class="sec-head__num dark">02 / Motion</span>
+    <span class="sec-head__num">02 — Motion</span>
   </div>
   <div class="reel reveal">
     <iframe src="https://www.youtube.com/embed/zj6eQt3N890" title="Roopa Bhudia showreel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -148,19 +139,18 @@
       <span class="eyebrow">The Book</span>
       <h2 class="sec-head__title">Comp Card</h2>
     </div>
-    <span class="sec-head__num">03 / Stats</span>
+    <span class="sec-head__num">03 — Stats</span>
   </div>
 
   <div class="comp reveal">
     <div class="comp__face">
       <span class="comp__facelabel">Roopa Bhudia</span>
-      <img src="https://media.sandrareynolds.co.uk/models/ZQheqhV4A3FHp8jn7WCKSHipMzUYB9GtLmQxGx023S6netcBFSVuc5NIDMCmiz2yqti1hd.jpg" alt="Roopa Bhudia — comp card" />
+      <img src="https://media.sandrareynolds.co.uk/models/ZQheqhV4A3FHp8jn7WCKSHipMzUYB9GtLmQxGx023S6netcBFSVuc5NIDMCmiz2yqti1hd.jpg" alt="Roopa Bhudia" />
     </div>
     <div class="comp__body">
       <h3 class="comp__name">Roopa Bhudia</h3>
       <div class="comp__cat">Model · Actor · London</div>
-      <!-- CONFIRM STAT: figures below are from the Sandra Reynolds profile. Other agencies
-           list slightly different numbers, so have Roopa confirm before publishing. -->
+      <!-- CONFIRM STAT: figures from the Sandra Reynolds profile. Have Roopa confirm before publishing. -->
       <ul class="stats">
         <li><span>Height</span><b>5'7"</b></li>
         <li><span>Bust</span><b>32E</b></li>
@@ -177,35 +167,35 @@
 </section>
 
 <!-- ============ RANGE ============ -->
-<section class="section section--bone" id="range">
+<section class="section section--tint" id="range">
   <div class="sec-head reveal">
     <div>
       <span class="eyebrow">What I Do</span>
       <h2 class="sec-head__title">Range</h2>
     </div>
-    <span class="sec-head__num dark">04 / Skills</span>
+    <span class="sec-head__num">04 — Skills</span>
   </div>
 
   <div class="range reveal">
     <div class="range__item"><div class="range__n">A1</div><h3>Fashion &amp; Editorial</h3><p>Studio and location editorial, look development, lookbook work.</p></div>
     <div class="range__item"><div class="range__n">A2</div><h3>Commercial &amp; Lifestyle</h3><p>Brand campaigns, product and lifestyle shoots, in-store and OOH.</p></div>
     <div class="range__item"><div class="range__n">A3</div><h3>Beauty &amp; Hair</h3><p>Close-up beauty, cosmetics, skincare and hair, plus hand work.</p></div>
-    <div class="range__item"><div class="range__n">A4</div><h3>Catwalk</h3><p>Runway across London and Europe. More than forty shows walked.</p></div>
+    <div class="range__item"><div class="range__n">A4</div><h3>Catwalk</h3><p>Runway across London and Europe, more than forty shows walked.</p></div>
     <div class="range__item"><div class="range__n">A5</div><h3>Bridal &amp; Occasion</h3><p>Bridal, occasion wear and mother-of-the-bride showcases.</p></div>
-    <div class="range__item"><div class="range__n">A6</div><h3>Lingerie &amp; Swimwear</h3><p>Lingerie, swimwear and fittings, with fit-model experience.</p></div>
-    <div class="range__item"><div class="range__n">A7</div><h3>Acting &amp; Presenting</h3><p>Commercial acting, presenting and voice work for broadcast and online.</p></div>
-    <div class="range__item"><div class="range__n">A8</div><h3>Live &amp; Events</h3><p>Exhibition, hospitality and promotional work, plus trained dance.</p></div>
+    <div class="range__item"><div class="range__n">A6</div><h3>Acting &amp; Presenting</h3><p>Commercial acting, presenting and voice work for broadcast and online.</p></div>
+    <div class="range__item"><div class="range__n">A7</div><h3>Live &amp; Events</h3><p>Exhibition, hospitality and promotional work, plus trained dance.</p></div>
+    <div class="range__item"><div class="range__n">A8</div><h3>Fittings</h3><p>Experienced fit model with a consistent, reliable size profile.</p></div>
   </div>
 </section>
 
 <!-- ============ WORK / CREDITS ============ -->
-<section class="section section--paper" id="work">
+<section class="section" id="work">
   <div class="sec-head reveal">
     <div>
       <span class="eyebrow">Selected Clients</span>
       <h2 class="sec-head__title">Work</h2>
     </div>
-    <span class="sec-head__num dark">05 / Credits</span>
+    <span class="sec-head__num">05 — Credits</span>
   </div>
 
   <div class="credits reveal">
@@ -222,18 +212,18 @@
     <div><b>Heineken</b><small>Commercial</small></div>
     <div><b>Stradivarius</b><small>Fashion</small></div>
   </div>
-  <p class="reveal" style="margin-top:2.4rem;color:#5a5142;font-size:.95rem;max-width:60ch">Plus forty-plus catwalk shows across London and Europe, and ongoing editorial, bridal and promotional work. Full credits and references available on request.</p>
+  <p class="reveal" style="margin-top:2.8rem;color:var(--muted);font-size:.95rem;max-width:60ch;font-weight:300">Plus forty-plus catwalk shows across London and Europe, and ongoing editorial, bridal and promotional work. Full credits and references available on request.</p>
 </section>
 
 <!-- ============ ABOUT ============ -->
-<section class="section section--paper" id="about" style="padding-top:0">
+<section class="section section--tint" id="about">
   <div class="about">
-    <div class="about__img">
+    <div class="about__img reveal">
       <img src="https://media.sandrareynolds.co.uk/models/dDgnsnymiKyJ8fUxhVZgqUn4rvsaVtzrCyftDfgWlB0BhXOCXQye2vjfEtcZzXYXy4NDNm.jpg" alt="Roopa Bhudia portrait" loading="lazy" />
     </div>
     <div class="reveal">
       <span class="eyebrow">About</span>
-      <p class="about__lead" style="margin-top:1rem">London-based, endlessly adaptable, and easy to work with on set.</p>
+      <p class="about__lead" style="margin-top:1.2rem">London-based, endlessly adaptable, and easy to work with on set.</p>
       <p>Roopa is a model and actor based in London with a versatile, non-traditional look that lets her sit naturally across a wide range of briefs and audiences. She moves comfortably between commercial and editorial, beauty, catwalk and bridal.</p>
       <p>She has fronted work for brands including Dior, Sky, NatWest and QVC, and has walked more than forty catwalk shows across London and Europe. Alongside modelling she acts, presents and dances, and brings the same steady, professional energy to every job.</p>
       <p>Hard-working, self-motivated and genuinely enjoyable to have on set. Available for shoots, shows, campaigns and events across the UK and beyond.</p>
@@ -248,27 +238,26 @@
       <span class="eyebrow">Booking Through</span>
       <h2 class="sec-head__title">Representation</h2>
     </div>
-    <span class="sec-head__num">06 / Agencies</span>
+    <span class="sec-head__num">06 — Agencies</span>
   </div>
-  <!-- REPRESENTATION: list only the agencies Roopa wants shown, with her preferred booking links. -->
   <div class="rep reveal">
-    <div class="rep__item"><span>Agency</span><b>Sandra Reynolds</b><br><a href="https://www.sandrareynolds.co.uk/model/roopa-bhudia" target="_blank" rel="noopener">View profile ↗</a></div>
-    <div class="rep__item"><span>Casting</span><b>Spotlight</b><br><a href="https://www.spotlight.com/profile/0638-0162-1835" target="_blank" rel="noopener">View profile ↗</a></div>
-    <div class="rep__item"><span>Direct</span><b>Personal enquiries</b><br><a href="contact.html">Get in touch →</a></div>
+    <div class="rep__item"><span>Agency</span><b>Sandra Reynolds</b><a href="https://www.sandrareynolds.co.uk/model/roopa-bhudia" target="_blank" rel="noopener">View profile ↗</a></div>
+    <div class="rep__item"><span>Casting</span><b>Spotlight</b><a href="https://www.spotlight.com/profile/0638-0162-1835" target="_blank" rel="noopener">View profile ↗</a></div>
+    <div class="rep__item"><span>Direct</span><b>Personal enquiries</b><a href="contact.html">Get in touch →</a></div>
   </div>
 </section>
 
 <!-- ============ CTA ============ -->
-<section class="section cta">
+<section class="section section--ink cta">
   <span class="eyebrow reveal">Let's Work Together</span>
-  <h2 class="cta__big reveal">Available for booking</h2>
+  <h2 class="cta__big reveal">Available for <em>booking</em></h2>
   <a href="contact.html" class="btn reveal">Get in touch</a>
 </section>
 
 <!-- ============ FOOTER ============ -->
 <footer>
-  <span>© <span id="yr"></span> Roopa Bhudia</span>
-  <span>Model &amp; Actor · London</span>
+  <span class="script">Roopa Bhudia</span>
+  <span>Model &amp; Actor · London · © <span id="yr"></span></span>
   <a href="#top">Back to top ↑</a>
 </footer>
 
