@@ -9,19 +9,18 @@
 <meta property="og:description" content="London-based model and actor. Commercial to couture, editorial to catwalk." />
 <meta property="og:type" content="website" />
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f4f1ea'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-style='italic' font-size='54' fill='%231a1613' text-anchor='middle'%3ERB%3C/text%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23141210'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-style='italic' font-size='54' fill='%23cc3b1d' text-anchor='middle'%3ERB%3C/text%3E%3C/svg%3E" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Space+Grotesk:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css" />
 
 <!--
   IMAGES load from Roopa's agency profile (used with permission) as placeholders.
-  They carry the agency watermark and will look far better once swapped for Roopa's
-  own high-res photos: drop them in assets/img/ and update the src paths.
-
-  Before fully live: confirm stats (search "CONFIRM STAT") and booking email ("CONTACT DETAIL").
+  They carry the agency watermark; the grayscale treatment tones it down, but the site
+  will look its best once these are swapped for Roopa's own high-res photos in assets/img/.
+  Before fully live: confirm stats ("CONFIRM STAT") and booking email ("CONTACT DETAIL").
 -->
 </head>
 <body>
@@ -29,9 +28,7 @@
 <!-- ============ NAV ============ -->
 <nav class="nav" id="nav">
   <a href="#top" class="nav__mark">
-    <!-- LOGO: once you upload the script logo, it will be swapped to:
-         <img src="assets/logo/logo.png" alt="Roopa Bhudia" />
-         For now the name renders in an elegant script typeface. -->
+    <!-- LOGO: once you upload the script logo -> <img src="assets/logo/logo.png" alt="Roopa Bhudia" /> -->
     Roopa Bhudia
   </a>
   <div class="nav__links" id="navlinks">
@@ -49,24 +46,40 @@
 <!-- ============ HERO ============ -->
 <header class="hero" id="top">
   <div class="hero__text">
-    <span class="eyebrow hero__eyebrow">London · Model &amp; Actor</span>
-    <h1 class="hero__name">Roopa<br><em>Bhudia</em></h1>
-    <p class="hero__sub">A versatile, non-traditional look that reads across cultures and campaigns, from commercial and editorial to catwalk, beauty and bridal.</p>
+    <div class="hero__issue"><b>N°01</b> — Portfolio &amp; Casting · London</div>
+    <h1 class="hero__name">Roopa<em>Bhudia</em></h1>
+    <p class="hero__sub">Model and actor with a versatile, non-traditional look that reads across cultures and campaigns, from commercial and editorial to catwalk, beauty and bridal.</p>
     <div class="hero__meta">
-      <span>Fashion</span><i class="dot"></i><span>Commercial</span><i class="dot"></i><span>Beauty</span><i class="dot"></i><span>Catwalk</span>
+      <span>Fashion</span><i class="dot"></i><span>Commercial</span><i class="dot"></i><span>Beauty</span><i class="dot"></i><span>Catwalk</span><i class="dot"></i><span>Actor</span>
     </div>
   </div>
   <div class="hero__portrait">
+    <span class="hero__tag">Model &amp; Actor — London</span>
     <img src="https://media.sandrareynolds.co.uk/models/ovMhuvmQJBpCh1wlck8xqdkuhRs61dYZusTwOm7Va9qaipRhVltfI58kKKxkc6nQEQkWbh.jpg" alt="Roopa Bhudia" />
   </div>
   <div class="scrollcue"><i></i> Scroll</div>
 </header>
 
-<!-- ============ MARQUEE ============ -->
-<div class="marquee" aria-label="Selected brands">
-  <div class="marquee__track">
-    <span>Dior</span><span>Sky</span><span>Disney+</span><span>NatWest</span><span>QVC</span><span>ITV</span><span>Wolford</span><span>Hobbs</span><span>Tesco</span><span>Heineken</span><span>Stradivarius</span><span>IT Cosmetics</span>
-    <span>Dior</span><span>Sky</span><span>Disney+</span><span>NatWest</span><span>QVC</span><span>ITV</span><span>Wolford</span><span>Hobbs</span><span>Tesco</span><span>Heineken</span><span>Stradivarius</span><span>IT Cosmetics</span>
+<!-- ============ NAME BANNER ============ -->
+<div class="banner" aria-hidden="true">
+  <div class="banner__track">
+    <span>Roopa Bhudia</span><span class="dot">✦</span><span class="out">Roopa Bhudia</span><span class="dot">✦</span><span>Roopa Bhudia</span><span class="dot">✦</span><span class="out">Roopa Bhudia</span><span class="dot">✦</span>
+    <span>Roopa Bhudia</span><span class="dot">✦</span><span class="out">Roopa Bhudia</span><span class="dot">✦</span><span>Roopa Bhudia</span><span class="dot">✦</span><span class="out">Roopa Bhudia</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<!-- ============ STATEMENT ============ -->
+<section class="statement reveal">
+  <p>A <span class="hl">non-traditional look</span> that moves between worlds, at home in a beauty campaign, on a catwalk, or <em>in front of a lens for a global brand.</em></p>
+</section>
+
+<!-- ============ MARQUEE (brands) ============ -->
+<div class="banner" style="background:var(--paper);border-color:var(--line)">
+  <div class="banner__track" style="animation-duration:46s">
+    <span class="out" style="-webkit-text-stroke-color:var(--line-2);font-size:clamp(1.1rem,2.2vw,1.6rem)">Dior · Sky · Disney+ · NatWest · QVC · ITV · Wolford · Hobbs · Tesco · Heineken · Stradivarius · IT Cosmetics</span>
+    <span class="dot" style="font-size:1.2rem">✦</span>
+    <span class="out" style="-webkit-text-stroke-color:var(--line-2);font-size:clamp(1.1rem,2.2vw,1.6rem)">Dior · Sky · Disney+ · NatWest · QVC · ITV · Wolford · Hobbs · Tesco · Heineken · Stradivarius · IT Cosmetics</span>
+    <span class="dot" style="font-size:1.2rem">✦</span>
   </div>
 </div>
 
@@ -75,18 +88,14 @@
   <div class="sec-head reveal">
     <div>
       <span class="eyebrow">Selected Frames</span>
-      <h2 class="sec-head__title">Portfolio</h2>
+      <h2 class="sec-head__title">Port<em>folio</em></h2>
     </div>
-    <span class="sec-head__num">01 — Folio</span>
+    <span class="sec-head__num"><b>N°01</b> — Folio · hover for colour</span>
   </div>
 
-  <!-- Natural-ratio masonry: images are never cropped. Reorder the figures to lead
-       with the strongest shots. Click any image to open the lightbox. -->
+  <!-- Natural-ratio masonry, never cropped. Grayscale by default, colour on hover.
+       Reorder the figures to lead with the strongest shots. -->
   <div class="gallery reveal" id="gallery">
-    <figure class="tile">
-      <img src="https://media.sandrareynolds.co.uk/models/g3zmyWvVsDnyKz09OMTk5t4ZxWMvOJtfDlyjlb73ef7sCVytz9ANw1r7JslB6blfUz8EXx.jpg" alt="Roopa Bhudia — fashion" loading="lazy" />
-      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Fashion</small></figcaption>
-    </figure>
     <figure class="tile">
       <img src="https://media.sandrareynolds.co.uk/models/igTxQDx04T03e3GAs2qbePwGyKY70JB1jTlvyhmjW63Ednk6gZgleie3OBTwM1omZkvCHR.jpg" alt="Roopa Bhudia — beauty" loading="lazy" />
       <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Beauty</small></figcaption>
@@ -100,16 +109,16 @@
       <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Lifestyle</small></figcaption>
     </figure>
     <figure class="tile">
+      <img src="https://media.sandrareynolds.co.uk/models/g3zmyWvVsDnyKz09OMTk5t4ZxWMvOJtfDlyjlb73ef7sCVytz9ANw1r7JslB6blfUz8EXx.jpg" alt="Roopa Bhudia — fashion" loading="lazy" />
+      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Fashion</small></figcaption>
+    </figure>
+    <figure class="tile">
       <img src="https://media.sandrareynolds.co.uk/models/8713HH8BVpLyEQvNtDHVeDNn82JjGtFd9lyMNhs6xfmUpWZz3VHKXocN0kXNTxgSvwSepE.jpg" alt="Roopa Bhudia — commercial" loading="lazy" />
       <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Commercial</small></figcaption>
     </figure>
     <figure class="tile">
-      <img src="https://media.sandrareynolds.co.uk/models/RlzsKwzXtzaW7v1SUVpKYuy0NiQUpNgmpi4VTECs0T39UsROChtMTTlvi0SnxQwsgFXt8J.jpg" alt="Roopa Bhudia — lifestyle" loading="lazy" />
-      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Lifestyle</small></figcaption>
-    </figure>
-    <figure class="tile">
-      <img src="https://media.sandrareynolds.co.uk/models/iImmBT5ANlBGIHBfHEK7NaCCaDEtPTOZrCdODaRWfMDe7iViy4A3sP0qwyMVAM1CGTH0B7.jpg" alt="Roopa Bhudia — beauty" loading="lazy" />
-      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Beauty</small></figcaption>
+      <img src="https://media.sandrareynolds.co.uk/models/RlzsKwzXtzaW7v1SUVpKYuy0NiQUpNgmpi4VTECs0T39UsROChtMTTlvi0SnxQwsgFXt8J.jpg" alt="Roopa Bhudia — portrait" loading="lazy" />
+      <figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Portrait</small></figcaption>
     </figure>
   </div>
 </section>
@@ -119,9 +128,9 @@
   <div class="sec-head reveal">
     <div>
       <span class="eyebrow">Watch</span>
-      <h2 class="sec-head__title">Showreel</h2>
+      <h2 class="sec-head__title">Show<em>reel</em></h2>
     </div>
-    <span class="sec-head__num">02 — Motion</span>
+    <span class="sec-head__num"><b>N°02</b> — Motion</span>
   </div>
   <div class="reel reveal">
     <iframe src="https://www.youtube.com/embed/zj6eQt3N890" title="Roopa Bhudia showreel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -137,9 +146,9 @@
   <div class="sec-head reveal">
     <div>
       <span class="eyebrow">The Book</span>
-      <h2 class="sec-head__title">Comp Card</h2>
+      <h2 class="sec-head__title">Comp <em>Card</em></h2>
     </div>
-    <span class="sec-head__num">03 — Stats</span>
+    <span class="sec-head__num"><b>N°03</b> — Stats</span>
   </div>
 
   <div class="comp reveal">
@@ -173,7 +182,7 @@
       <span class="eyebrow">What I Do</span>
       <h2 class="sec-head__title">Range</h2>
     </div>
-    <span class="sec-head__num">04 — Skills</span>
+    <span class="sec-head__num"><b>N°04</b> — Skills</span>
   </div>
 
   <div class="range reveal">
@@ -195,7 +204,7 @@
       <span class="eyebrow">Selected Clients</span>
       <h2 class="sec-head__title">Work</h2>
     </div>
-    <span class="sec-head__num">05 — Credits</span>
+    <span class="sec-head__num"><b>N°05</b> — Credits</span>
   </div>
 
   <div class="credits reveal">
@@ -236,9 +245,9 @@
   <div class="sec-head reveal">
     <div>
       <span class="eyebrow">Booking Through</span>
-      <h2 class="sec-head__title">Representation</h2>
+      <h2 class="sec-head__title">Represent<em>ation</em></h2>
     </div>
-    <span class="sec-head__num">06 — Agencies</span>
+    <span class="sec-head__num"><b>N°06</b> — Agencies</span>
   </div>
   <div class="rep reveal">
     <div class="rep__item"><span>Agency</span><b>Sandra Reynolds</b><a href="https://www.sandrareynolds.co.uk/model/roopa-bhudia" target="_blank" rel="noopener">View profile ↗</a></div>
