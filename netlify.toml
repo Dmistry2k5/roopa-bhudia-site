@@ -1,0 +1,12 @@
+[build]
+  publish = "."
+
+# Static site, no build step. Netlify Forms is enabled automatically
+# by the data-netlify="true" attribute on the contact form.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

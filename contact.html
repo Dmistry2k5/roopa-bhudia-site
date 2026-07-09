@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact — Roopa Bhudia</title>
+<meta name="description" content="Booking and enquiries for Roopa Bhudia, London-based model and actor." />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2315110c'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='52' fill='%23c7a56b' text-anchor='middle'%3ERB%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav scrolled" id="nav">
+  <a href="index.html" class="nav__mark">
+    <!-- <img src="assets/logo/logo.svg" alt="Roopa Bhudia" /> -->
+    Roopa <span>Bhudia</span>
+  </a>
+  <div class="nav__links" id="navlinks">
+    <a href="index.html#portfolio">Portfolio</a>
+    <a href="index.html#reel">Showreel</a>
+    <a href="index.html#card">Comp Card</a>
+    <a href="index.html#about">About</a>
+    <a href="contact.html" class="nav__cta">Booking</a>
+  </div>
+  <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ============ CONTACT ============ -->
+<main class="contact-wrap">
+  <div class="contact-intro reveal">
+    <span class="eyebrow">Booking &amp; Enquiries</span>
+    <h1>Let's<br>work<br>together</h1>
+    <p>For castings, campaigns, shows and events, send a note with the dates and the brief. Roopa will come back to you quickly.</p>
+
+    <div class="contact-details">
+      <div>
+        <span class="lbl">Email</span>
+        <!-- CONTACT DETAIL: set the real booking email address here and in the mailto below. -->
+        <a class="big" href="mailto:hello@roopabhudia.com">hello@roopabhudia.com</a>
+      </div>
+      <div>
+        <span class="lbl">Based in</span>
+        <span>London, United Kingdom · available UK-wide and abroad</span>
+      </div>
+      <div>
+        <span class="lbl">Represented by</span>
+        <a class="big" style="font-size:1.1rem" href="https://www.sandrareynolds.co.uk/model/roopa-bhudia" target="_blank" rel="noopener">Sandra Reynolds Agency ↗</a>
+      </div>
+    </div>
+
+    <!-- SOCIAL: add or remove links as Roopa prefers. -->
+    <div class="contact-social">
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.spotlight.com/profile/0638-0162-1835" target="_blank" rel="noopener">Spotlight</a>
+      <a href="#" target="_blank" rel="noopener">TikTok</a>
+    </div>
+  </div>
+
+  <!-- Netlify Forms: the data-netlify attribute wires this up automatically once deployed on Netlify.
+       Submissions appear in your Netlify dashboard under Forms, and can email you on each entry. -->
+  <div class="form reveal">
+    <h2>Send an enquiry</h2>
+    <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+      <input type="hidden" name="form-name" value="booking" />
+      <p class="hidden-hp"><label>Leave this empty: <input name="bot-field" /></label></p>
+
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+      </div>
+      <div class="field">
+        <label for="company">Company / agency</label>
+        <input id="company" name="company" type="text" />
+      </div>
+      <div class="field">
+        <label for="type">Type of work</label>
+        <select id="type" name="type">
+          <option>Commercial</option>
+          <option>Editorial / Fashion</option>
+          <option>Beauty</option>
+          <option>Catwalk</option>
+          <option>Bridal / Occasion</option>
+          <option>Acting / Presenting</option>
+          <option>Event / Promotional</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="dates">Shoot / show dates</label>
+        <input id="dates" name="dates" type="text" placeholder="e.g. 12–14 August" />
+      </div>
+      <div class="field">
+        <label for="message">Brief</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button class="btn" type="submit">Send enquiry</button>
+      <p class="form__note">Or email directly at hello@roopabhudia.com</p>
+    </form>
+  </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <span>© <span id="yr"></span> Roopa Bhudia</span>
+  <span>Model &amp; Actor · London</span>
+  <a href="index.html">Home →</a>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
