@@ -15,8 +15,8 @@
     if (loader) { loader.classList.add("done"); setTimeout(function () { if (loader && loader.parentNode) loader.remove(); }, 1100); }
   }
   if (loader && !reduce) {
-    window.addEventListener("load", function () { setTimeout(reveal, 1300); });
-    setTimeout(reveal, 2800);
+    window.addEventListener("load", function () { setTimeout(reveal, 2700); });
+    setTimeout(reveal, 3900);
   } else { reveal(); if (loader) loader.remove(); }
 
   /* nav scroll state */

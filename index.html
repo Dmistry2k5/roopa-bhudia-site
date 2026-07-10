@@ -35,7 +35,12 @@
 
 <!-- ===== PRELOADER ===== -->
 <div class="loader" id="loader">
-  <img class="crest" src="assets/logo/crest.png" alt="Roopa Bhudia crest" />
+  <div class="loader__crest">
+    <div class="loader__glow"></div>
+    <svg class="loader__ring" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="96"/></svg>
+    <img class="crest" src="assets/logo/crest.png" alt="Roopa Bhudia crest" />
+    <span class="loader__name">Roopa Bhudia</span>
+  </div>
 </div>
 
 <!-- ===== NAV ===== -->
@@ -61,7 +66,7 @@
     <span class="eyebrow hero__eyebrow">Model &amp; Actor — London</span>
     <h1 class="hero__name">Roopa<em>Bhudia</em></h1>
     <div class="hero__rule"></div>
-    <p class="hero__sub">A versatile, non-traditional presence that reads across cultures and campaigns, from commercial and editorial to catwalk, beauty and bridal.</p>
+    <p class="hero__sub">A model and actor whose look moves fluently between worlds. Commercial to couture, editorial to catwalk, and a presence that reads across cultures and campaigns.</p>
     <div class="hero__meta"><span>Fashion</span><i class="dot"></i><span>Commercial</span><i class="dot"></i><span>Beauty</span><i class="dot"></i><span>Catwalk</span></div>
   </div>
   <div class="hero__portrait">
@@ -72,12 +77,12 @@
 <!-- ===== DIVIDER ===== -->
 <div class="divider">
   <span class="script">Roopa Bhudia</span>
-  <small>Est. London</small>
+  <small>London · Worldwide</small>
 </div>
 
 <!-- ===== STATEMENT ===== -->
 <section class="statement reveal">
-  <p>A non-traditional presence that moves between worlds, at home in a beauty campaign, on a catwalk, or <em>in front of a lens for a global brand.</em></p>
+  <p>A presence that moves between worlds. At home in a beauty campaign, on a runway, or <em>in front of the lens for a global brand.</em></p>
 </section>
 
 <!-- ===== FIGURES ===== -->
@@ -107,7 +112,7 @@
 <!-- ===== SHOWREEL ===== -->
 <section class="section section--surface" id="reel">
   <div class="sec-head reveal">
-    <div><span class="eyebrow">Watch</span><h2 class="sec-head__title">Show<em>reel</em></h2></div>
+    <div><span class="eyebrow">In Motion</span><h2 class="sec-head__title">Show<em>reel</em></h2></div>
     <span class="sec-head__num"><b>II</b> — Motion</span>
   </div>
   <div class="reel reveal"><iframe src="https://www.youtube.com/embed/zj6eQt3N890" title="Roopa Bhudia showreel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
@@ -140,7 +145,7 @@
 <!-- ===== RANGE ===== -->
 <section class="section section--surface" id="range">
   <div class="sec-head reveal">
-    <div><span class="eyebrow">What I Do</span><h2 class="sec-head__title">Range</h2></div>
+    <div><span class="eyebrow">The Range</span><h2 class="sec-head__title">Range</h2></div>
     <span class="sec-head__num"><b>IV</b> — Skills</span>
   </div>
   <div class="range reveal">
@@ -178,7 +183,7 @@
     <div class="about__img reveal"><img src="https://media.sandrareynolds.co.uk/models/dDgnsnymiKyJ8fUxhVZgqUn4rvsaVtzrCyftDfgWlB0BhXOCXQye2vjfEtcZzXYXy4NDNm.jpg" alt="Roopa Bhudia portrait" loading="lazy" /></div>
     <div class="reveal">
       <span class="eyebrow">About</span>
-      <p class="about__lead" style="margin-top:1.4rem">London-based, endlessly adaptable, and a pleasure to work with on set.</p>
+      <p class="about__lead" style="margin-top:1.4rem">London based, quietly versatile, and a genuine pleasure to have on set.</p>
       <p>Roopa is a model and actor based in London with a versatile, non-traditional look that lets her sit naturally across a wide range of briefs and audiences. She moves comfortably between commercial and editorial, beauty, catwalk and bridal.</p>
       <p>She has fronted work for brands including Dior, Sky, NatWest and QVC, and has walked more than forty catwalk shows across London and Europe. Alongside modelling she acts, presents and dances, and brings the same steady, professional energy to every job.</p>
       <p>Available for shoots, shows, campaigns and events across the UK and beyond.</p>
@@ -202,7 +207,7 @@
 <!-- ===== CTA ===== -->
 <section class="section cta section--surface">
   <img class="crest cta__crest" src="assets/logo/crest.png" alt="Roopa Bhudia crest" />
-  <span class="eyebrow reveal">Let's Work Together</span>
+  <span class="eyebrow reveal">Booking &amp; Enquiries</span>
   <h2 class="cta__big reveal">Available for <em>booking</em></h2>
   <a href="contact.html" class="btn reveal">Get in touch</a>
 </section>
@@ -221,7 +226,7 @@
     document.body.classList.remove('loading');
     var l=document.getElementById('loader'); if(l) l.style.display='none';
     document.querySelectorAll('.reveal').forEach(function(e){ e.classList.add('in'); });
-  }, 3500);
+  }, 4300);
 </script>
 </body>
 </html>
