@@ -9,47 +9,51 @@
 <meta property="og:description" content="London-based model and actor. Commercial to couture, editorial to catwalk." />
 <meta property="og:type" content="website" />
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f5efe6'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-style='italic' font-size='54' fill='%23b0324a' text-anchor='middle'%3ERB%3C/text%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23181310'/%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%23b28d55' stroke-width='2'/%3E%3Ctext x='50' y='66' font-family='Georgia,serif' font-style='italic' font-size='40' fill='%23b28d55' text-anchor='middle'%3ERB%3C/text%3E%3C/svg%3E" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Space+Grotesk:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css" />
 
 <noscript><style>
   .loader{display:none!important}
   body.loading{overflow:auto!important}
-  .reveal,.hero__issue,.hero__sub,.hero__meta,.statement .word{opacity:1!important;transform:none!important}
-  .hero__name .ln i{transform:none!important}
-  #petals,.cursor-dot,.cursor-ring{display:none!important}
+  .reveal{opacity:1!important;transform:none!important}
 </style></noscript>
 
 <!--
-  IMAGES load from Roopa's agency profile (used with permission) as placeholders,
-  shown in grayscale (colour on hover). They will look their best swapped for
-  Roopa's own high-res photos in assets/img/.
+  IMAGES load from Roopa's agency profile (used with permission), shown grayscale and
+  cropped from the top so the agency watermark along the bottom is hidden. They will look
+  their best swapped for Roopa's own high-res photos in assets/img/.
   Before fully live: confirm stats ("CONFIRM STAT") and booking email ("CONTACT DETAIL").
+
+  BRAND: the crest and monogram below are hand-built vectors. To use a Bloom crest instead,
+  save it to assets/logo/ and replace the relevant <svg class="crest"> block with an <img>.
 -->
 </head>
 <body class="loading">
 
 <!-- ===== PRELOADER ===== -->
 <div class="loader" id="loader">
-  <div class="loader__name">Roopa Bhudia</div>
-  <div class="loader__bar"><i></i></div>
-  <svg class="loader__flower" viewBox="0 0 40 40"><path d="M20,34 C20,26 20,20 20,14 M20,22 C10,20 8,12 16,10 M20,18 C30,16 32,24 24,26 M20,14 C14,8 18,2 20,2 C22,2 26,8 20,14Z"/></svg>
+  <svg class="crest" viewBox="0 0 220 220" fill="none" aria-hidden="true">
+    <circle cx="110" cy="110" r="84" stroke="currentColor" stroke-width="1"/>
+    <circle cx="110" cy="110" r="90" stroke="currentColor" stroke-width="0.5" opacity=".45"/>
+    <g stroke="currentColor" stroke-width="1" stroke-linecap="round">
+      <path d="M110,30 C110,22 110,16 110,9"/>
+      <path d="M110,17 C103,13 100,5 107,3 C112,2 113,11 110,17 Z"/>
+      <path d="M110,21 C117,17 120,9 113,7 C108,6 107,15 110,21 Z"/>
+      <path d="M110,28 C105,26 102,21 107,20"/><path d="M110,28 C115,26 118,21 113,20"/>
+    </g>
+    <text x="110" y="134" text-anchor="middle" font-family="Cormorant, Georgia, serif" font-style="italic" font-size="72" fill="currentColor">RB</text>
+    <text x="110" y="170" text-anchor="middle" font-family="Jost, sans-serif" font-size="9" letter-spacing="5" fill="currentColor">LONDON</text>
+  </svg>
 </div>
-
-<!-- ===== CURSOR / PETALS / PROGRESS ===== -->
-<div class="cursor-dot" id="cdot" aria-hidden="true"></div>
-<div class="cursor-ring" id="cring" aria-hidden="true"><span>View</span></div>
-<canvas id="petals" aria-hidden="true"></canvas>
-<div class="progress" id="progress" aria-hidden="true"></div>
 
 <!-- ===== NAV ===== -->
 <nav class="nav" id="nav">
   <a href="#top" class="nav__mark">
-    <!-- LOGO: once you upload the script logo -> <img src="assets/logo/logo.png" alt="Roopa Bhudia" /> -->
+    <!-- LOGO: to use a Bloom logo -> <img src="assets/logo/logo.png" alt="Roopa Bhudia" /> -->
     Roopa Bhudia
   </a>
   <div class="nav__links" id="navlinks">
@@ -64,66 +68,43 @@
 
 <!-- ===== HERO ===== -->
 <header class="hero" id="top">
-  <div class="hero__glow"></div>
   <div class="hero__text">
-    <div class="hero__issue"><b>N°01</b> — Portfolio &amp; Casting · London</div>
-    <h1 class="hero__name">
-      <span class="ln"><i>Roopa</i></span>
-      <em><span class="ln"><i>Bhudia</i></span></em>
-    </h1>
-    <p class="hero__sub">Model and actor with a versatile, non-traditional look that reads across cultures and campaigns, from commercial and editorial to catwalk, beauty and bridal.</p>
-    <div class="hero__meta">
-      <span>Fashion</span><i class="dot"></i><span>Commercial</span><i class="dot"></i><span>Beauty</span><i class="dot"></i><span>Catwalk</span><i class="dot"></i><span>Actor</span>
-    </div>
+    <svg class="crest hero__crest" viewBox="0 0 220 220" fill="none" aria-hidden="true">
+      <circle cx="110" cy="110" r="84" stroke="currentColor" stroke-width="1.4"/>
+      <g stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+        <path d="M110,30 C110,22 110,16 110,9"/>
+        <path d="M110,17 C103,13 100,5 107,3 C112,2 113,11 110,17 Z"/>
+        <path d="M110,21 C117,17 120,9 113,7 C108,6 107,15 110,21 Z"/>
+      </g>
+      <text x="110" y="138" text-anchor="middle" font-family="Cormorant, Georgia, serif" font-style="italic" font-size="80" fill="currentColor">RB</text>
+    </svg>
+    <span class="eyebrow hero__eyebrow">Model &amp; Actor — London</span>
+    <h1 class="hero__name">Roopa<em>Bhudia</em></h1>
+    <div class="hero__rule"></div>
+    <p class="hero__sub">A versatile, non-traditional presence that reads across cultures and campaigns, from commercial and editorial to catwalk, beauty and bridal.</p>
+    <div class="hero__meta"><span>Fashion</span><i class="dot"></i><span>Commercial</span><i class="dot"></i><span>Beauty</span><i class="dot"></i><span>Catwalk</span></div>
   </div>
   <div class="hero__portrait">
-    <span class="hero__tag">Model &amp; Actor — London</span>
-    <img src="https://media.sandrareynolds.co.uk/models/ovMhuvmQJBpCh1wlck8xqdkuhRs61dYZusTwOm7Va9qaipRhVltfI58kKKxkc6nQEQkWbh.jpg" alt="Roopa Bhudia" data-parallax="0.05" />
+    <img src="https://media.sandrareynolds.co.uk/models/ovMhuvmQJBpCh1wlck8xqdkuhRs61dYZusTwOm7Va9qaipRhVltfI58kKKxkc6nQEQkWbh.jpg" alt="Roopa Bhudia" />
   </div>
-  <svg class="hero__floral draw" viewBox="0 0 160 240" data-parallax="0.12" aria-hidden="true">
-    <path d="M82,236 C74,196 96,168 82,128 C72,98 90,74 82,40"/>
-    <path d="M82,150 C54,146 44,168 66,180 C82,188 84,160 82,150 Z"/>
-    <path d="M82,120 C110,116 120,138 98,150 C82,158 80,130 82,120 Z"/>
-    <path d="M82,40 C66,30 66,10 82,6 C98,10 98,30 82,40 Z"/>
-    <path d="M82,64 C72,58 72,48 82,44"/>
-  </svg>
-  <div class="scrollcue"><i></i> Scroll</div>
 </header>
 
-<!-- ===== NAME BANNER ===== -->
-<div class="banner" aria-hidden="true">
-  <div class="banner__track">
-    <span>Roopa Bhudia</span><span class="dot">✦</span><span class="out">Roopa Bhudia</span><span class="dot">✦</span><span>Roopa Bhudia</span><span class="dot">✦</span><span class="out">Roopa Bhudia</span><span class="dot">✦</span>
-    <span>Roopa Bhudia</span><span class="dot">✦</span><span class="out">Roopa Bhudia</span><span class="dot">✦</span><span>Roopa Bhudia</span><span class="dot">✦</span><span class="out">Roopa Bhudia</span><span class="dot">✦</span>
-  </div>
+<!-- ===== DIVIDER ===== -->
+<div class="divider">
+  <span class="script">Roopa Bhudia</span>
+  <small>Est. London</small>
 </div>
 
 <!-- ===== STATEMENT ===== -->
-<section class="statement">
-  <p>A <span class="hl">non-traditional look</span> that moves between worlds, at home in a beauty campaign, on a catwalk, or <em>in front of a lens for a global brand.</em></p>
-  <svg class="statement__floral draw" viewBox="0 0 160 240" aria-hidden="true">
-    <path d="M82,236 C74,196 96,168 82,128 C72,98 90,74 82,40"/>
-    <path d="M82,150 C54,146 44,168 66,180 C82,188 84,160 82,150 Z"/>
-    <path d="M82,120 C110,116 120,138 98,150 C82,158 80,130 82,120 Z"/>
-    <path d="M82,40 C66,30 66,10 82,6 C98,10 98,30 82,40 Z"/>
-  </svg>
+<section class="statement reveal">
+  <p>A non-traditional presence that moves between worlds, at home in a beauty campaign, on a catwalk, or <em>in front of a lens for a global brand.</em></p>
 </section>
-
-<!-- ===== BRAND MARQUEE ===== -->
-<div class="banner" style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-  <div class="banner__track" style="animation-duration:46s">
-    <span class="out" style="-webkit-text-stroke-color:var(--line-2);font-size:clamp(1.1rem,2.2vw,1.6rem)">Dior · Sky · Disney+ · NatWest · QVC · ITV · Wolford · Hobbs · Tesco · Heineken · Stradivarius · IT Cosmetics</span>
-    <span class="dot" style="font-size:1.1rem">✦</span>
-    <span class="out" style="-webkit-text-stroke-color:var(--line-2);font-size:clamp(1.1rem,2.2vw,1.6rem)">Dior · Sky · Disney+ · NatWest · QVC · ITV · Wolford · Hobbs · Tesco · Heineken · Stradivarius · IT Cosmetics</span>
-    <span class="dot" style="font-size:1.1rem">✦</span>
-  </div>
-</div>
 
 <!-- ===== FIGURES ===== -->
 <div class="figures">
-  <div class="figures__item"><div class="figures__n"><span data-count="40">0</span><span class="plus">+</span></div><div class="figures__l">Catwalk shows</div></div>
-  <div class="figures__item"><div class="figures__n"><span data-count="12">0</span><span class="plus">+</span></div><div class="figures__l">Brand campaigns</div></div>
-  <div class="figures__item"><div class="figures__n"><span data-count="8">0</span></div><div class="figures__l">Disciplines</div></div>
+  <div class="figures__item"><div class="figures__n">40<span class="plus">+</span></div><div class="figures__l">Catwalk shows</div></div>
+  <div class="figures__item"><div class="figures__n">12<span class="plus">+</span></div><div class="figures__l">Brand campaigns</div></div>
+  <div class="figures__item"><div class="figures__n">8</div><div class="figures__l">Disciplines</div></div>
   <div class="figures__item"><div class="figures__n">UK &amp; EU</div><div class="figures__l">Available</div></div>
 </div>
 
@@ -131,7 +112,7 @@
 <section class="section" id="portfolio">
   <div class="sec-head reveal">
     <div><span class="eyebrow">Selected Frames</span><h2 class="sec-head__title">Port<em>folio</em></h2></div>
-    <span class="sec-head__num"><b>N°01</b> — Folio · hover for colour</span>
+    <span class="sec-head__num"><b>I</b> — Folio</span>
   </div>
   <div class="gallery reveal" id="gallery">
     <figure class="tile"><img src="https://media.sandrareynolds.co.uk/models/igTxQDx04T03e3GAs2qbePwGyKY70JB1jTlvyhmjW63Ednk6gZgleie3OBTwM1omZkvCHR.jpg" alt="Roopa Bhudia — beauty" loading="lazy" /><figcaption class="tile__cap"><b>Roopa Bhudia</b><small>Beauty</small></figcaption></figure>
@@ -144,10 +125,10 @@
 </section>
 
 <!-- ===== SHOWREEL ===== -->
-<section class="section section--tint" id="reel">
+<section class="section section--surface" id="reel">
   <div class="sec-head reveal">
     <div><span class="eyebrow">Watch</span><h2 class="sec-head__title">Show<em>reel</em></h2></div>
-    <span class="sec-head__num"><b>N°02</b> — Motion</span>
+    <span class="sec-head__num"><b>II</b> — Motion</span>
   </div>
   <div class="reel reveal"><iframe src="https://www.youtube.com/embed/zj6eQt3N890" title="Roopa Bhudia showreel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
   <div class="reel__meta reveal"><span>Commercial · Broadcast · Presenting</span><a href="https://www.spotlight.com/profile/0638-0162-1835" target="_blank" rel="noopener">View Spotlight profile ↗</a></div>
@@ -157,7 +138,7 @@
 <section class="section" id="card">
   <div class="sec-head reveal">
     <div><span class="eyebrow">The Book</span><h2 class="sec-head__title">Comp <em>Card</em></h2></div>
-    <span class="sec-head__num"><b>N°03</b> — Stats</span>
+    <span class="sec-head__num"><b>III</b> — Stats</span>
   </div>
   <div class="comp reveal">
     <div class="comp__face"><span class="comp__facelabel">Roopa Bhudia</span><img src="https://media.sandrareynolds.co.uk/models/ZQheqhV4A3FHp8jn7WCKSHipMzUYB9GtLmQxGx023S6netcBFSVuc5NIDMCmiz2yqti1hd.jpg" alt="Roopa Bhudia" /></div>
@@ -177,20 +158,20 @@
 </section>
 
 <!-- ===== RANGE ===== -->
-<section class="section section--tint" id="range">
+<section class="section section--surface" id="range">
   <div class="sec-head reveal">
     <div><span class="eyebrow">What I Do</span><h2 class="sec-head__title">Range</h2></div>
-    <span class="sec-head__num"><b>N°04</b> — Skills</span>
+    <span class="sec-head__num"><b>IV</b> — Skills</span>
   </div>
   <div class="range reveal">
-    <div class="range__item"><div class="range__n">A1</div><h3>Fashion &amp; Editorial</h3><p>Studio and location editorial, look development, lookbook work.</p></div>
-    <div class="range__item"><div class="range__n">A2</div><h3>Commercial &amp; Lifestyle</h3><p>Brand campaigns, product and lifestyle shoots, in-store and OOH.</p></div>
-    <div class="range__item"><div class="range__n">A3</div><h3>Beauty &amp; Hair</h3><p>Close-up beauty, cosmetics, skincare and hair, plus hand work.</p></div>
-    <div class="range__item"><div class="range__n">A4</div><h3>Catwalk</h3><p>Runway across London and Europe, more than forty shows walked.</p></div>
-    <div class="range__item"><div class="range__n">A5</div><h3>Bridal &amp; Occasion</h3><p>Bridal, occasion wear and mother-of-the-bride showcases.</p></div>
-    <div class="range__item"><div class="range__n">A6</div><h3>Acting &amp; Presenting</h3><p>Commercial acting, presenting and voice work for broadcast and online.</p></div>
-    <div class="range__item"><div class="range__n">A7</div><h3>Live &amp; Events</h3><p>Exhibition, hospitality and promotional work, plus trained dance.</p></div>
-    <div class="range__item"><div class="range__n">A8</div><h3>Fittings</h3><p>Experienced fit model with a consistent, reliable size profile.</p></div>
+    <div class="range__item"><div class="range__n">I</div><h3>Fashion &amp; Editorial</h3><p>Studio and location editorial, look development, lookbook work.</p></div>
+    <div class="range__item"><div class="range__n">II</div><h3>Commercial &amp; Lifestyle</h3><p>Brand campaigns, product and lifestyle shoots, in-store and OOH.</p></div>
+    <div class="range__item"><div class="range__n">III</div><h3>Beauty &amp; Hair</h3><p>Close-up beauty, cosmetics, skincare and hair, plus hand work.</p></div>
+    <div class="range__item"><div class="range__n">IV</div><h3>Catwalk</h3><p>Runway across London and Europe, more than forty shows walked.</p></div>
+    <div class="range__item"><div class="range__n">V</div><h3>Bridal &amp; Occasion</h3><p>Bridal, occasion wear and mother-of-the-bride showcases.</p></div>
+    <div class="range__item"><div class="range__n">VI</div><h3>Acting &amp; Presenting</h3><p>Commercial acting, presenting and voice work for broadcast and online.</p></div>
+    <div class="range__item"><div class="range__n">VII</div><h3>Live &amp; Events</h3><p>Exhibition, hospitality and promotional work, plus trained dance.</p></div>
+    <div class="range__item"><div class="range__n">VIII</div><h3>Fittings</h3><p>Experienced fit model with a consistent, reliable size profile.</p></div>
   </div>
 </section>
 
@@ -198,7 +179,7 @@
 <section class="section" id="work">
   <div class="sec-head reveal">
     <div><span class="eyebrow">Selected Clients</span><h2 class="sec-head__title">Work</h2></div>
-    <span class="sec-head__num"><b>N°05</b> — Credits</span>
+    <span class="sec-head__num"><b>V</b> — Credits</span>
   </div>
   <div class="credits reveal">
     <div><b>Dior</b><small>Campaign · Catwalk</small></div><div><b>Sky</b><small>Commercial</small></div>
@@ -208,25 +189,19 @@
     <div><b>Hobbs</b><small>Fashion Show</small></div><div><b>Tesco</b><small>Commercial</small></div>
     <div><b>Heineken</b><small>Commercial</small></div><div><b>Stradivarius</b><small>Fashion</small></div>
   </div>
-  <p class="reveal" style="margin-top:2.8rem;color:var(--muted);font-size:.95rem;max-width:60ch;font-weight:300">Plus forty-plus catwalk shows across London and Europe, and ongoing editorial, bridal and promotional work. Full credits and references available on request.</p>
+  <p class="reveal" style="margin-top:3rem;color:var(--muted);font-size:.95rem;max-width:60ch;font-weight:300">Plus forty-plus catwalk shows across London and Europe, and ongoing editorial, bridal and promotional work. Full credits and references available on request.</p>
 </section>
 
 <!-- ===== ABOUT ===== -->
-<section class="section section--tint" id="about">
+<section class="section section--surface" id="about">
   <div class="about">
-    <svg class="about__floral draw" viewBox="0 0 160 240" aria-hidden="true">
-      <path d="M82,236 C74,196 96,168 82,128 C72,98 90,74 82,40"/>
-      <path d="M82,150 C54,146 44,168 66,180 C82,188 84,160 82,150 Z"/>
-      <path d="M82,120 C110,116 120,138 98,150 C82,158 80,130 82,120 Z"/>
-      <path d="M82,40 C66,30 66,10 82,6 C98,10 98,30 82,40 Z"/>
-    </svg>
     <div class="about__img reveal"><img src="https://media.sandrareynolds.co.uk/models/dDgnsnymiKyJ8fUxhVZgqUn4rvsaVtzrCyftDfgWlB0BhXOCXQye2vjfEtcZzXYXy4NDNm.jpg" alt="Roopa Bhudia portrait" loading="lazy" /></div>
     <div class="reveal">
       <span class="eyebrow">About</span>
-      <p class="about__lead" style="margin-top:1.2rem">London-based, endlessly adaptable, and easy to work with on set.</p>
+      <p class="about__lead" style="margin-top:1.4rem">London-based, endlessly adaptable, and a pleasure to work with on set.</p>
       <p>Roopa is a model and actor based in London with a versatile, non-traditional look that lets her sit naturally across a wide range of briefs and audiences. She moves comfortably between commercial and editorial, beauty, catwalk and bridal.</p>
       <p>She has fronted work for brands including Dior, Sky, NatWest and QVC, and has walked more than forty catwalk shows across London and Europe. Alongside modelling she acts, presents and dances, and brings the same steady, professional energy to every job.</p>
-      <p>Hard-working, self-motivated and genuinely enjoyable to have on set. Available for shoots, shows, campaigns and events across the UK and beyond.</p>
+      <p>Available for shoots, shows, campaigns and events across the UK and beyond.</p>
     </div>
   </div>
 </section>
@@ -235,7 +210,7 @@
 <section class="section" id="representation">
   <div class="sec-head reveal">
     <div><span class="eyebrow">Booking Through</span><h2 class="sec-head__title">Represent<em>ation</em></h2></div>
-    <span class="sec-head__num"><b>N°06</b> — Agencies</span>
+    <span class="sec-head__num"><b>VI</b> — Agencies</span>
   </div>
   <div class="rep reveal">
     <div class="rep__item"><span>Agency</span><b>Sandra Reynolds</b><a href="https://www.sandrareynolds.co.uk/model/roopa-bhudia" target="_blank" rel="noopener">View profile ↗</a></div>
@@ -245,44 +220,40 @@
 </section>
 
 <!-- ===== CTA ===== -->
-<section class="section section--ink cta">
-  <svg class="cta__floral draw" viewBox="0 0 160 240" aria-hidden="true">
-    <path d="M82,236 C74,196 96,168 82,128 C72,98 90,74 82,40"/>
-    <path d="M82,150 C54,146 44,168 66,180 C82,188 84,160 82,150 Z"/>
-    <path d="M82,120 C110,116 120,138 98,150 C82,158 80,130 82,120 Z"/>
-    <path d="M82,40 C66,30 66,10 82,6 C98,10 98,30 82,40 Z"/>
+<section class="section cta section--surface">
+  <svg class="crest cta__crest" viewBox="0 0 220 220" fill="none" aria-hidden="true">
+    <circle cx="110" cy="110" r="84" stroke="currentColor" stroke-width="1"/>
+    <circle cx="110" cy="110" r="90" stroke="currentColor" stroke-width="0.5" opacity=".45"/>
+    <g stroke="currentColor" stroke-width="1" stroke-linecap="round">
+      <path d="M110,30 C110,22 110,16 110,9"/>
+      <path d="M110,17 C103,13 100,5 107,3 C112,2 113,11 110,17 Z"/>
+      <path d="M110,21 C117,17 120,9 113,7 C108,6 107,15 110,21 Z"/>
+    </g>
+    <text x="110" y="134" text-anchor="middle" font-family="Cormorant, Georgia, serif" font-style="italic" font-size="72" fill="currentColor">RB</text>
   </svg>
   <span class="eyebrow reveal">Let's Work Together</span>
   <h2 class="cta__big reveal">Available for <em>booking</em></h2>
-  <a href="contact.html" class="btn reveal" data-magnetic>Get in touch</a>
+  <a href="contact.html" class="btn reveal">Get in touch</a>
 </section>
 
 <!-- ===== FOOTER ===== -->
 <footer>
-  <span class="script">Roopa Bhudia</span>
-  <span>Model &amp; Actor · London · © <span id="yr"></span></span>
+  <svg class="footcrest" viewBox="0 0 220 220" fill="none" aria-hidden="true">
+    <circle cx="110" cy="110" r="84" stroke="currentColor" stroke-width="2"/>
+    <text x="110" y="140" text-anchor="middle" font-family="Cormorant, Georgia, serif" font-style="italic" font-size="86" fill="currentColor">RB</text>
+  </svg>
+  <span>Model &amp; Actor · London · © <span id="yr"></span> Roopa Bhudia</span>
   <a href="#top">Back to top ↑</a>
 </footer>
 
-<!-- ===== LIGHTBOX ===== -->
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image preview">
-  <button class="lb__close" id="lbclose" aria-label="Close">×</button>
-  <button class="lb__nav lb__prev" id="lbprev" aria-label="Previous">‹</button>
-  <div class="lb__inner"><img id="lbimg" src="" alt="Roopa Bhudia" /></div>
-  <button class="lb__nav lb__next" id="lbnext" aria-label="Next">›</button>
-</div>
-
 <script src="assets/js/main.js"></script>
 <script>
-  /* Failsafe: if main.js fails to load, still reveal everything after 4s */
   setTimeout(function(){
     if (window.__rbInit) return;
-    document.body.classList.remove('loading'); document.body.classList.add('loaded');
-    var l = document.getElementById('loader'); if (l) l.style.display = 'none';
-    document.querySelectorAll('.reveal,.statement').forEach(function(e){ e.classList.add('in'); });
-    document.querySelectorAll('.hero__name .ln i').forEach(function(e){ e.style.transform = 'none'; });
-    document.querySelectorAll('[data-count]').forEach(function(e){ e.textContent = e.dataset.count; });
-  }, 4000);
+    document.body.classList.remove('loading');
+    var l=document.getElementById('loader'); if(l) l.style.display='none';
+    document.querySelectorAll('.reveal').forEach(function(e){ e.classList.add('in'); });
+  }, 3500);
 </script>
 </body>
 </html>
