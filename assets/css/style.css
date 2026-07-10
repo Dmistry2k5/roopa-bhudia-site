@@ -45,15 +45,13 @@ body::after{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;back
 /* ---------- PRELOADER ---------- */
 .loader{position:fixed;inset:0;z-index:9000;background:var(--bg);display:flex;align-items:center;justify-content:center;transition:opacity 1.1s ease,visibility 1.1s}
 .loader.done{opacity:0;visibility:hidden}
-.loader__crest{position:relative;width:min(380px,66vw);aspect-ratio:1;display:flex;align-items:center;justify-content:center}
-.loader__glow{position:absolute;inset:-22%;background:radial-gradient(circle,rgba(178,141,85,.18),transparent 62%);opacity:0;animation:l_glow 1.8s ease .3s forwards}
-.loader__ring{position:absolute;inset:-6%;width:112%;height:112%;transform:rotate(-90deg)}
-.loader__ring circle{fill:none;stroke:var(--bronze);stroke-width:.7;stroke-dasharray:603;stroke-dashoffset:603;animation:l_ring 2.1s var(--ease) .1s forwards}
-.loader .crest{width:100%;opacity:0;filter:blur(20px);transform:scale(.82);animation:l_crest 2s var(--ease) .3s forwards}
-.loader__name{position:absolute;bottom:-3.2rem;left:50%;transform:translateX(-50%) translateY(12px);white-space:nowrap;font-family:var(--script);font-size:2.2rem;color:var(--bronze-soft);opacity:0;animation:l_name 1s ease 1.4s forwards}
-@keyframes l_ring{to{stroke-dashoffset:0}}
-@keyframes l_crest{0%{opacity:0;filter:blur(20px);transform:scale(.82)}55%{opacity:1}100%{opacity:1;filter:blur(0);transform:scale(1)}}
-@keyframes l_name{to{opacity:1;transform:translateX(-50%) translateY(0)}}
+.loader__stage{position:relative;width:min(468px,78vw);aspect-ratio:1;display:flex;align-items:center;justify-content:center}
+.loader__glow{position:absolute;inset:-24%;background:radial-gradient(circle,rgba(178,141,85,.2),transparent 62%);opacity:0;animation:l_glow 2s ease .2s forwards}
+.loader__line{position:absolute;inset:2%;width:96%;height:96%}
+.loader__line .ln{fill:none;stroke:var(--bronze);stroke-width:.9;stroke-linecap:round;stroke-linejoin:round}
+.loader__line .mono{font-family:var(--serif);font-style:italic;font-weight:400;font-size:62px;fill:var(--bronze-soft);opacity:0}
+.loader__full{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0}
+.loader__name{position:absolute;bottom:-3.6rem;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:var(--script);font-size:2.5rem;color:var(--bronze-soft);opacity:0}
 @keyframes l_glow{to{opacity:1}}
 
 /* ---------- NAV ---------- */
@@ -73,14 +71,16 @@ body::after{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;back
 .nav,header,section,footer,.divider,.figures{position:relative;z-index:2}
 
 /* Bloom crest images + texture layer */
-img.crest,img.footcrest{display:block;height:auto;object-fit:contain}
+img.crest,img.footcrest,.nav__crest{display:block;height:auto;object-fit:contain}
+.nav__crest{width:38px;margin-right:.1rem}
+@media(max-width:520px){.nav__crest{width:32px}}
 .bgtexture{position:fixed;inset:0;z-index:0;background:url(../img/texture.jpg) center/cover no-repeat;opacity:.32;pointer-events:none}
 @media(prefers-reduced-motion:reduce){.bgtexture{opacity:.2}}
 
 /* ---------- HERO ---------- */
 .hero{min-height:100svh;display:grid;grid-template-columns:1.02fr .98fr;position:relative}
 .hero__text{display:flex;flex-direction:column;justify-content:center;padding:8rem var(--pad) 4rem;position:relative}
-.hero__crest{width:96px;margin-bottom:2.2rem}
+.hero__crest{width:128px;margin-bottom:2.4rem}
 .hero__eyebrow{display:block;margin-bottom:1.6rem}
 .hero__name{font-family:var(--serif);font-weight:400;font-size:clamp(4.2rem,11vw,10.5rem);line-height:.84;letter-spacing:-.01em;margin:0}
 .hero__name em{font-style:italic;font-weight:300;display:block;color:var(--bone)}
@@ -223,7 +223,7 @@ img.crest,img.footcrest{display:block;height:auto;object-fit:contain}
 
 /* ---------- FOOTER ---------- */
 footer{padding:3rem var(--pad);display:flex;justify-content:space-between;align-items:center;gap:1.4rem;flex-wrap:wrap;border-top:1px solid var(--line);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-footer .footcrest{width:40px;color:var(--bronze)}
+footer .footcrest{width:58px;color:var(--bronze)}
 footer .script{font-family:var(--script);font-size:1.6rem;letter-spacing:0;text-transform:none;color:var(--bone)}
 footer a:hover{color:var(--bronze-soft)}
 
@@ -250,7 +250,7 @@ footer a:hover{color:var(--bronze-soft)}
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;scroll-behavior:auto;transition-duration:.001s!important}
   .reveal{opacity:1!important;transform:none!important}
-  .loader .crest{opacity:1!important;transform:none!important;filter:none!important}
-  .loader__ring circle{stroke-dashoffset:0!important}
-  .loader__name,.loader__glow{opacity:1!important;transform:translateX(-50%)!important}
+  .loader__full{opacity:1!important}
+  .loader__line{opacity:0!important}
+  .loader__name,.loader__glow{opacity:1!important}
 }

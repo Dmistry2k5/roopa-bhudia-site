@@ -35,10 +35,26 @@
 
 <!-- ===== PRELOADER ===== -->
 <div class="loader" id="loader">
-  <div class="loader__crest">
+  <div class="loader__stage">
     <div class="loader__glow"></div>
-    <svg class="loader__ring" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="96"/></svg>
-    <img class="crest" src="assets/logo/crest.png" alt="Roopa Bhudia crest" />
+    <svg class="loader__line" id="loaderline" viewBox="0 0 200 200" aria-hidden="true">
+      <circle class="ln" cx="100" cy="100" r="94"/>
+      <circle class="ln" cx="100" cy="100" r="86"/>
+      <path class="ln" d="M100,12 C100,18 100,22 100,28"/>
+      <path class="ln" d="M100,20 C92,15 89,7 96,6 C101,6 103,15 100,20 Z"/>
+      <path class="ln" d="M100,20 C108,15 111,7 104,6 C99,6 97,15 100,20 Z"/>
+      <path class="ln" d="M100,188 C100,182 100,178 100,172"/>
+      <path class="ln" d="M100,180 C92,185 89,193 96,194 C101,194 103,185 100,180 Z"/>
+      <path class="ln" d="M100,180 C108,185 111,193 104,194 C99,194 97,185 100,180 Z"/>
+      <path class="ln" d="M46,64 C34,80 34,120 46,136"/>
+      <path class="ln" d="M42,88 C34,86 32,94 40,96"/>
+      <path class="ln" d="M40,106 C32,104 30,112 38,114"/>
+      <path class="ln" d="M154,64 C166,80 166,120 154,136"/>
+      <path class="ln" d="M158,88 C166,86 168,94 160,96"/>
+      <path class="ln" d="M160,106 C168,104 170,112 162,114"/>
+      <text class="mono" x="100" y="126" text-anchor="middle">RB</text>
+    </svg>
+    <img class="crest loader__full" src="assets/logo/crest.png" alt="Roopa Bhudia crest" />
     <span class="loader__name">Roopa Bhudia</span>
   </div>
 </div>
@@ -46,7 +62,7 @@
 <!-- ===== NAV ===== -->
 <nav class="nav" id="nav">
   <a href="#top" class="nav__mark">
-    <!-- To use a wordmark image logo instead, replace the text with an img in assets/logo/ -->
+    <img class="nav__crest" src="assets/logo/crest.png" alt="" aria-hidden="true" />
     Roopa Bhudia
   </a>
   <div class="nav__links" id="navlinks">
@@ -226,7 +242,7 @@
     document.body.classList.remove('loading');
     var l=document.getElementById('loader'); if(l) l.style.display='none';
     document.querySelectorAll('.reveal').forEach(function(e){ e.classList.add('in'); });
-  }, 4300);
+  }, 5400);
 </script>
 </body>
 </html>
