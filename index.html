@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/style.css?v=9" />
 
 <noscript><style>
   .loader{display:none!important}
@@ -240,7 +240,7 @@
   <button class="lightbox__nav lightbox__next" id="lbNext" aria-label="Next">&rsaquo;</button>
 </div>
 
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.js?v=9"></script>
 <script>
   setTimeout(function(){
     if (window.__rbInit) return;
@@ -249,6 +249,18 @@
     var l=document.getElementById('loader'); if(l) l.style.display='none';
     document.querySelectorAll('.reveal').forEach(function(e){ e.classList.add('in'); });
   }, 6400);
+</script>
+<script>
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('mobileMenu'),c=document.getElementById('mmClose');
+  if(!b||!m)return;
+  function openM(){m.classList.add('open');m.setAttribute('aria-hidden','false');document.body.classList.add('menu-open');b.setAttribute('aria-expanded','true');}
+  function closeM(){m.classList.remove('open');m.setAttribute('aria-hidden','true');document.body.classList.remove('menu-open');b.setAttribute('aria-expanded','false');}
+  b.addEventListener('click',function(){m.classList.contains('open')?closeM():openM();});
+  if(c)c.addEventListener('click',closeM);
+  var a=m.getElementsByTagName('a');for(var i=0;i<a.length;i++)a[i].addEventListener('click',closeM);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeM();});
+})();
 </script>
 </body>
 </html>

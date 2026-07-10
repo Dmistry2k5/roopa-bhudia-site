@@ -54,15 +54,7 @@
   addEventListener("scroll", function () { if (nav) nav.classList.toggle("scrolled", scrollY > 40); }, { passive: true });
 
   /* mobile menu */
-  var burger = $("#burger"), mmenu = $("#mobileMenu"), mmClose = $("#mmClose");
-  function openMenu() { if (!mmenu) return; mmenu.classList.add("open"); mmenu.setAttribute("aria-hidden", "false"); document.body.classList.add("menu-open"); if (burger) burger.setAttribute("aria-expanded", "true"); }
-  function closeMenu() { if (!mmenu) return; mmenu.classList.remove("open"); mmenu.setAttribute("aria-hidden", "true"); document.body.classList.remove("menu-open"); if (burger) burger.setAttribute("aria-expanded", "false"); }
-  if (burger && mmenu) {
-    burger.addEventListener("click", function () { mmenu.classList.contains("open") ? closeMenu() : openMenu(); });
-    if (mmClose) mmClose.addEventListener("click", closeMenu);
-    $$("a", mmenu).forEach(function (a) { a.addEventListener("click", closeMenu); });
-    addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
-  }
+  /* mobile menu is wired via an inline script in the page for maximum reliability */
 
   /* gentle reveal on scroll */
   var io = new IntersectionObserver(function (entries) {
