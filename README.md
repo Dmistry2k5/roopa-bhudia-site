@@ -102,3 +102,24 @@ sed -i '' 's#https://media.sandrareynolds.co.uk/models/#assets/img/#g' index.htm
 ```
 
 Then commit and push.
+
+---
+
+## SEO
+
+The site now includes: descriptive titles and meta descriptions, a canonical URL per page,
+Open Graph and Twitter tags with a branded share image (`assets/img/og-image.jpg`),
+Schema.org Person structured data, `robots.txt`, and `sitemap.xml`.
+
+**After deploying, do these once to get found on Google:**
+1. Go to Google Search Console (search.google.com/search-console), add the site, verify it
+   (Netlify makes this easy with a DNS or meta-tag method).
+2. Submit `sitemap.xml` in Search Console under "Sitemaps".
+3. Optional: do the same at Bing Webmaster Tools.
+
+**If you switch to a custom domain later** (e.g. roopabhudia.com), update the URLs:
+find and replace `https://roopabhudia.netlify.app` with the new domain across
+`index.html`, `contact.html`, `robots.txt` and `sitemap.xml`, then redeploy.
+
+**Biggest ongoing SEO wins:** real photos with descriptive filenames and alt text,
+a custom domain, and getting her agency/Spotlight profiles and socials to link to the site.
