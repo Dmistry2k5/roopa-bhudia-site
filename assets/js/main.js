@@ -54,15 +54,14 @@
   addEventListener("scroll", function () { if (nav) nav.classList.toggle("scrolled", scrollY > 40); }, { passive: true });
 
   /* mobile menu */
-  var burger = $("#burger"), links = $("#navlinks");
-  if (burger && links) {
-    burger.addEventListener("click", function () {
-      var open = links.classList.toggle("open");
-      burger.classList.toggle("open", open);
-      document.body.classList.toggle("menu-open", open);
-      burger.setAttribute("aria-expanded", open);
-    });
-    $$("a", links).forEach(function (a) { a.addEventListener("click", function () { links.classList.remove("open"); burger.classList.remove("open"); document.body.classList.remove("menu-open"); burger.setAttribute("aria-expanded", false); }); });
+  var burger = $("#burger"), mmenu = $("#mobileMenu"), mmClose = $("#mmClose");
+  function openMenu() { if (!mmenu) return; mmenu.classList.add("open"); mmenu.setAttribute("aria-hidden", "false"); document.body.classList.add("menu-open"); if (burger) burger.setAttribute("aria-expanded", "true"); }
+  function closeMenu() { if (!mmenu) return; mmenu.classList.remove("open"); mmenu.setAttribute("aria-hidden", "true"); document.body.classList.remove("menu-open"); if (burger) burger.setAttribute("aria-expanded", "false"); }
+  if (burger && mmenu) {
+    burger.addEventListener("click", function () { mmenu.classList.contains("open") ? closeMenu() : openMenu(); });
+    if (mmClose) mmClose.addEventListener("click", closeMenu);
+    $$("a", mmenu).forEach(function (a) { a.addEventListener("click", closeMenu); });
+    addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
   }
 
   /* gentle reveal on scroll */
