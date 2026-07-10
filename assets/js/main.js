@@ -16,14 +16,15 @@
   }
   /* real crest ink-draw: stroke the actual artwork on, then fill with bronze */
   var draw = $("#crestdraw");
-  if (loader && draw && !reduce) {
+  var seen = false; try { seen = sessionStorage.getItem("rb_seen") === "1"; } catch (e) {}
+  if (loader && draw && !reduce && !seen) {
     try {
       var paths = $$("path", draw), lens = [];
       paths.forEach(function (p) {
         var len = p.getTotalLength ? p.getTotalLength() : 0; lens.push(len);
         p.style.strokeDasharray = len; p.style.strokeDashoffset = len;
       });
-      var stagger = 42, drawDur = 850;
+      var stagger = 58, drawDur = 1000;
       paths.forEach(function (p, i) {
         p.animate([{ strokeDashoffset: lens[i] }, { strokeDashoffset: 0 }],
           { duration: drawDur, delay: i * stagger, easing: "ease-in-out", fill: "forwards" });
@@ -32,18 +33,19 @@
       setTimeout(function () {
         paths.forEach(function (p, i) {
           p.animate([{ fillOpacity: 0 }, { fillOpacity: 1 }],
-            { duration: 750, delay: i * 10, easing: "ease", fill: "forwards" });
+            { duration: 900, delay: i * 12, easing: "ease", fill: "forwards" });
         });
-      }, drawEnd - 250);
+      }, drawEnd - 300);
       var name = $(".loader__name");
       if (name) name.animate([{ opacity: 0, transform: "translateX(-50%) translateY(12px)" }, { opacity: 1, transform: "translateX(-50%) translateY(0)" }],
-        { duration: 900, delay: drawEnd + 150, easing: "ease", fill: "forwards" });
+        { duration: 1000, delay: drawEnd + 250, easing: "ease", fill: "forwards" });
     } catch (e) { $$("#crestdraw path").forEach(function (p) { p.style.fillOpacity = 1; p.style.strokeWidth = 0; }); }
   }
 
-  if (loader && !reduce) {
-    window.addEventListener("load", function () { setTimeout(reveal, 3800); });
-    setTimeout(reveal, 5000);
+  if (loader && !reduce && !seen) {
+    try { sessionStorage.setItem("rb_seen", "1"); } catch (e) {}
+    window.addEventListener("load", function () { setTimeout(reveal, 4600); });
+    setTimeout(reveal, 6000);
   } else { reveal(); if (loader) loader.remove(); }
 
   /* nav scroll state */
@@ -55,9 +57,11 @@
   if (burger && links) {
     burger.addEventListener("click", function () {
       var open = links.classList.toggle("open");
+      burger.classList.toggle("open", open);
+      document.body.classList.toggle("menu-open", open);
       burger.setAttribute("aria-expanded", open);
     });
-    $$("a", links).forEach(function (a) { a.addEventListener("click", function () { links.classList.remove("open"); burger.setAttribute("aria-expanded", false); }); });
+    $$("a", links).forEach(function (a) { a.addEventListener("click", function () { links.classList.remove("open"); burger.classList.remove("open"); document.body.classList.remove("menu-open"); burger.setAttribute("aria-expanded", false); }); });
   }
 
   /* gentle reveal on scroll */

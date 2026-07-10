@@ -244,6 +244,10 @@ footer a:hover{color:var(--bronze-soft)}
   .nav__links.open{transform:none}
   .nav__links a{font-size:1rem;opacity:1}
   .nav__burger{display:block;z-index:70}
+  .nav__mark{font-size:1.55rem;gap:.4rem;min-width:0}
+  .nav__crest{width:30px}
+  .hero__portrait::after{display:none}
+  .nav__links{width:min(86vw,360px);box-shadow:-30px 0 80px -40px rgba(0,0,0,.7)}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;scroll-behavior:auto;transition-duration:.001s!important}
@@ -268,3 +272,9 @@ footer a:hover{color:var(--bronze-soft)}
 .lightbox__nav:hover{opacity:1;color:var(--bronze-soft)}
 .lightbox__prev{left:1rem}.lightbox__next{right:1rem}
 @media(max-width:600px){.lightbox__frame img{height:auto;width:88vw}.lightbox__nav{font-size:2rem;padding:.6rem}}
+
+/* ---------- MOBILE MENU: hamburger -> close, scroll lock ---------- */
+body.menu-open{overflow:hidden}
+.nav__burger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.nav__burger.open span:nth-child(2){opacity:0}
+.nav__burger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
