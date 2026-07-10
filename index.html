@@ -24,36 +24,24 @@
 
 <!--
   IMAGES load from Roopa's agency profile (used with permission), shown grayscale and
-  cropped from the top so the agency watermark along the bottom is hidden. They will look
-  their best swapped for Roopa's own high-res photos in assets/img/.
+  cropped from the top so the agency watermark along the bottom is hidden. Swap for
+  Roopa's own high-res photos in assets/img/ when available.
+  BRAND: crest is assets/logo/crest.png (from Bloom). An alternate is crest-alt.png.
   Before fully live: confirm stats ("CONFIRM STAT") and booking email ("CONTACT DETAIL").
-
-  BRAND: the crest and monogram below are hand-built vectors. To use a Bloom crest instead,
-  save it to assets/logo/ and replace the relevant <svg class="crest"> block with an <img>.
 -->
 </head>
 <body class="loading">
+<div class="bgtexture" aria-hidden="true"></div>
 
 <!-- ===== PRELOADER ===== -->
 <div class="loader" id="loader">
-  <svg class="crest" viewBox="0 0 220 220" fill="none" aria-hidden="true">
-    <circle cx="110" cy="110" r="84" stroke="currentColor" stroke-width="1"/>
-    <circle cx="110" cy="110" r="90" stroke="currentColor" stroke-width="0.5" opacity=".45"/>
-    <g stroke="currentColor" stroke-width="1" stroke-linecap="round">
-      <path d="M110,30 C110,22 110,16 110,9"/>
-      <path d="M110,17 C103,13 100,5 107,3 C112,2 113,11 110,17 Z"/>
-      <path d="M110,21 C117,17 120,9 113,7 C108,6 107,15 110,21 Z"/>
-      <path d="M110,28 C105,26 102,21 107,20"/><path d="M110,28 C115,26 118,21 113,20"/>
-    </g>
-    <text x="110" y="134" text-anchor="middle" font-family="Cormorant, Georgia, serif" font-style="italic" font-size="72" fill="currentColor">RB</text>
-    <text x="110" y="170" text-anchor="middle" font-family="Jost, sans-serif" font-size="9" letter-spacing="5" fill="currentColor">LONDON</text>
-  </svg>
+  <img class="crest" src="assets/logo/crest.png" alt="Roopa Bhudia crest" />
 </div>
 
 <!-- ===== NAV ===== -->
 <nav class="nav" id="nav">
   <a href="#top" class="nav__mark">
-    <!-- LOGO: to use a Bloom logo -> <img src="assets/logo/logo.png" alt="Roopa Bhudia" /> -->
+    <!-- To use a wordmark image logo instead, replace the text with an img in assets/logo/ -->
     Roopa Bhudia
   </a>
   <div class="nav__links" id="navlinks">
@@ -69,15 +57,7 @@
 <!-- ===== HERO ===== -->
 <header class="hero" id="top">
   <div class="hero__text">
-    <svg class="crest hero__crest" viewBox="0 0 220 220" fill="none" aria-hidden="true">
-      <circle cx="110" cy="110" r="84" stroke="currentColor" stroke-width="1.4"/>
-      <g stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
-        <path d="M110,30 C110,22 110,16 110,9"/>
-        <path d="M110,17 C103,13 100,5 107,3 C112,2 113,11 110,17 Z"/>
-        <path d="M110,21 C117,17 120,9 113,7 C108,6 107,15 110,21 Z"/>
-      </g>
-      <text x="110" y="138" text-anchor="middle" font-family="Cormorant, Georgia, serif" font-style="italic" font-size="80" fill="currentColor">RB</text>
-    </svg>
+    <img class="crest hero__crest" src="assets/logo/crest.png" alt="Roopa Bhudia crest" />
     <span class="eyebrow hero__eyebrow">Model &amp; Actor — London</span>
     <h1 class="hero__name">Roopa<em>Bhudia</em></h1>
     <div class="hero__rule"></div>
@@ -221,16 +201,7 @@
 
 <!-- ===== CTA ===== -->
 <section class="section cta section--surface">
-  <svg class="crest cta__crest" viewBox="0 0 220 220" fill="none" aria-hidden="true">
-    <circle cx="110" cy="110" r="84" stroke="currentColor" stroke-width="1"/>
-    <circle cx="110" cy="110" r="90" stroke="currentColor" stroke-width="0.5" opacity=".45"/>
-    <g stroke="currentColor" stroke-width="1" stroke-linecap="round">
-      <path d="M110,30 C110,22 110,16 110,9"/>
-      <path d="M110,17 C103,13 100,5 107,3 C112,2 113,11 110,17 Z"/>
-      <path d="M110,21 C117,17 120,9 113,7 C108,6 107,15 110,21 Z"/>
-    </g>
-    <text x="110" y="134" text-anchor="middle" font-family="Cormorant, Georgia, serif" font-style="italic" font-size="72" fill="currentColor">RB</text>
-  </svg>
+  <img class="crest cta__crest" src="assets/logo/crest.png" alt="Roopa Bhudia crest" />
   <span class="eyebrow reveal">Let's Work Together</span>
   <h2 class="cta__big reveal">Available for <em>booking</em></h2>
   <a href="contact.html" class="btn reveal">Get in touch</a>
@@ -238,10 +209,7 @@
 
 <!-- ===== FOOTER ===== -->
 <footer>
-  <svg class="footcrest" viewBox="0 0 220 220" fill="none" aria-hidden="true">
-    <circle cx="110" cy="110" r="84" stroke="currentColor" stroke-width="2"/>
-    <text x="110" y="140" text-anchor="middle" font-family="Cormorant, Georgia, serif" font-style="italic" font-size="86" fill="currentColor">RB</text>
-  </svg>
+  <img class="footcrest" src="assets/logo/crest.png" alt="Roopa Bhudia crest" />
   <span>Model &amp; Actor · London · © <span id="yr"></span> Roopa Bhudia</span>
   <a href="#top">Back to top ↑</a>
 </footer>
