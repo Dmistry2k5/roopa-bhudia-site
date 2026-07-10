@@ -12,6 +12,7 @@
   var loader = $("#loader");
   function reveal() {
     document.body.classList.remove("loading");
+    document.body.classList.add("entered");
     if (loader) { loader.classList.add("done"); setTimeout(function () { if (loader && loader.parentNode) loader.remove(); }, 1100); }
   }
   /* real crest ink-draw: stroke the actual artwork on, then fill with bronze */

@@ -20,6 +20,7 @@
   .loader{display:none!important}
   body.loading{overflow:auto!important}
   .reveal{opacity:1!important;transform:none!important}
+  .hero__portrait::before{display:none!important}
 </style></noscript>
 
 <!--
@@ -234,6 +235,7 @@
   setTimeout(function(){
     if (window.__rbInit) return;
     document.body.classList.remove('loading');
+    document.body.classList.add('entered');
     var l=document.getElementById('loader'); if(l) l.style.display='none';
     document.querySelectorAll('.reveal').forEach(function(e){ e.classList.add('in'); });
   }, 6400);
